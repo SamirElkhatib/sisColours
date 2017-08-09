@@ -1,1 +1,48 @@
 /* You can add global styles to this file, and also import other style files */
+
+.search-bar {
+  float: left;
+  width: 30%;
+  padding: 0;
+  margin-right: 0;
+  height: 100vh;
+  display: grid;
+}
+
+.search-structure{
+  float: inherit;
+  width: 100%;
+  overflow-y: scroll;
+
+}
+
+.search-row{
+  padding: 7%;
+  color: white;
+}
+
+.search-row:nth-child(even){
+  background-color: #8ccdce;
+}
+.search-row:nth-child(odd){
+  background-color: #65b4bf;
+}
+
+.slots-table {
+  float: left;
+  width: 70%
+}
+
+.table-structure {
+  width: inherit;
+  background-color: yellow;
+  position: absolute;
+}
+
+.slot {
+  position: absolute;
+  width: 20%;
+  opacity: 0.8;
+  text-align: center;
+  child-align: middle;
+}

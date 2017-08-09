@@ -1,0 +1,15 @@
+<div class="search-structure" style="padding: 0">
+    <div *ngFor="let course of searchCourses(searchTerm);"
+         [class.bg-info]="course.crn == lastPressed"
+         (click)="selectCourse(course); lastPressed = course.crn"
+         (mouseover)="hover(course)"
+         (mouseleave)="leaveHover()"
+         class="search-row">
+        <div>{{course.name}} - Section {{course.sec}}</div>
+        <div>with {{course.instructor}}</div>
+    </div>
+</div>
+<div>
+    <label>Search:</label>
+    <input (input)="searchTerm = $event.target.value">
+</div>

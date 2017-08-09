@@ -1,0 +1,90 @@
+Data converted to JSON using http://convertjson.com/html-table-to-json.htm
+
+TODO: Tasks in the project:
+Course Model:
+    Reading times properly
+    Converting times into TimeModels
+
+Time Model:
+    Reading and converting time into slots
+
+Time representation:
+    Can be done in a table which is divided into 15 minutes sections
+    Each column is a day, Each row is 15 minutes
+    Or not a table. Elements?
+
+    HTML conversion from time to table format
+    HTML element, set css style color using Angular. Colour changes based on crn...
+    Colours table containing names of colours manipulated using JS when course selected....
+
+Steps:
+    Convert course information into slots?
+    Time format --> slot for each time
+
+TODO: Pages:
+## Required:
+ _______      ______      ______      _______
+|       |    |      |    |      |    |       |
+| Login |    | Sign |    | Home |    | User  |
+|       |    |  up  |    | Page |    |Account|
+|_______|    |______|    |______|    |_______|
+
+Homepage: Search and select courses and build schedule
+User Account: change password, change theme....
+
+## Optional:
+ ______      _______
+|      |    |       |
+|Course|    | Admin |
+|Review|    |       |
+|______|    |_______|
+
+TODO: Sections in the project:
+=============================BACK-END===================================//
+1) Acquiring Data                                                       // Present in zombie.js module in To do list project
+    -- Conversion from HTML?                                            // Done through tabletojson library
+    -- Access to AUBsis...                                              // Done through Zombiejs
+                                                                        //
+2) Reading and Converting Data:                                         // I decided to require all data locally for faster access on client
+    -- Convert to JSON                                                  // side, even though longer website load period and massive client
+    -- Store everything in courses[] (DataSource)                       // resource consumption
+    -- Courses with two (or more?) session entries                      //
+    -- Interaction with data should be independent of courses order     // Storing Data could be done as raw JSON table, then accessed for
+                                                                        // info, or can be stored as courses[] on MongoDB
+3) Accounts and Login:                                                  //
+    -- JWT based authentication                                         //
+    -- Account Information                                              // All information stored in MongoDB
+        ** Selected Schedule                                            //
+        ** Username/Password                                            //
+        ** Settings and preferences                                     //
+                                                                        //
+============================FRONT-END===================================//
+4) Course Presentation (Style of display, hover scenario...)            //
+5) Page Presentation:                                                   //
+    -- Course selection tab                                             //
+    -- Logout, Navigation tab...                                        //
+    -- Schedule display                                                 //
+    -- Course information                                               //
+        ** Course reviews?                                              //
+        ** Courses syllabi's...                                         //
+        ** Link to previouses.com?                                      //
+6) Accounts for several years, several schedules per year...            //
+========================================================================//
+
+
+Admin control page:
+    -- Communication with API (request data update...)
+    -- Advanced data control functionality....
+        ** Retrieving and modifying accounts
+
+
+TODO: Check the option of automatic registration on sis using virtual browser (Zombie)
+TODO: Complete the server side implementation
+TODO: Allow users to create custom time slots
+TODO: Theme customizability! Users should be able to change site theme
+TODO: Separate page for each course?
+TODO: Professors and courses rating system with comments!
+TODO: Add loading screen (added in <app>Loading...</app>)
+TODO: Use pipes to change slot colour?
+TODO: Use pipes to change how hours and days look? => Design alternative
+TODO: https://www.sitepoint.com/user-authentication-mean-stack/ check this website: Change Content Based on User Status?

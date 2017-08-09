@@ -1,0 +1,7 @@
+<div class="table-structure" [ngStyle]="{'height': height+'px'}">
+    <!--TODO: Days style?-->
+    <div *ngFor="let day of days; let i = index" [ngStyle]="drawDay(i)" class="slot btn-primary">{{day}}</div>
+    <div *ngFor="let slot of slotsRepository.Slots" [ngStyle]="drawSlot(slot)" [ngClass]="getClass(slot)"
+         class="slot btn-primary">{{slot.name}}
+    </div>
+</div>
